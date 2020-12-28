@@ -19,15 +19,15 @@
 
 ### インストール & 起動
 
-[Releases](https://github.com/nekocodeX/alt-ime-ahk-mod/releases) から `alt-ime-ahk-mod.exe` をダウンロード後、好きな場所へ配置し、起動するとタスクトレイに常駐します 🎉
+-   [Releases](https://github.com/nekocodeX/alt-ime-ahk-mod/releases) から `alt-ime-ahk-mod.exe` をダウンロード後、好きな場所へ配置し、起動するとタスクトレイに常駐します 🎉
 
 ### 終了
 
-タスクトレイのアイコンを右クリック → `Exit` をクリック
+-   タスクトレイのアイコンを右クリック → `Exit` をクリック
 
 ### アンインストール
 
-`alt-ime-ahk-mod.exe` を削除
+-   `alt-ime-ahk-mod.exe` を削除
 
 ## 💡 Tips
 
@@ -52,4 +52,5 @@
 ## 🙇‍♂️ 謝辞
 
 [alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk) の作者 [karakaram](https://github.com/karakaram)
+
 [Alt の空打ちで日本語入力(IME)を切り替えるツールを作った](http://www.karakaram.com/alt-ime-on-off/)
