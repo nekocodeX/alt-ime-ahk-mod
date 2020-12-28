@@ -8,7 +8,7 @@
 
 ## 🤔 [オリジナル](https://github.com/karakaram/alt-ime-ahk) からの変更点
 
--   Windows 10 v1909 以降 <kbd>Alt</kbd> キーを長押しすると、Xbox Game Bar が起動してしまう問題を修正
+-   Windows 10 v1909 以降 <kbd>Alt</kbd> キーを長押しすると、Xbox Game Bar が起動してしまう問題を修正  
     Xbox Game Bar 起動用仮想キーコードとのバッティングを回避 (`vk07` -> `vkFF`)
 
 ## ✅ 動作環境
@@ -32,7 +32,7 @@
 ## 💡 Tips
 
 -   管理者権限が必要なアプリケーションで動作させる場合、`alt-ime-ahk-mod.exe` を `管理者として実行` してください
--   PC 起動時に自動実行する場合、`スタートアップ` ではなく `タスク スケジューラ` をおすすめします
+-   PC 起動時に自動実行する場合、`スタートアップ` ではなく `タスク スケジューラ` をおすすめします  
     (`スタートアップ` では `管理者として実行` 出来ない為)
 
     設定例:
@@ -46,7 +46,7 @@
 
     </div>
 
--   IntelliJ IDEA など JetBrains 製の IDE をお使いの方は `上部メニューバー` > `View` > `Tool Buttons` をオンにしてください
+-   IntelliJ IDEA など JetBrains 製の IDE をお使いの方は `上部メニューバー` > `View` > `Tool Buttons` をオンにしてください  
     オフのまま使うと、<kbd>Alt</kbd> キーを離した際に `alt-ime-ahk-mod.exe` がエラー終了します
 
 ## 🙇‍♂️ 謝辞
