@@ -4,7 +4,8 @@
 ; 右 Alt キーの空打ちで IME を「かな」に切り替え
 ; Alt キーを押している間に他のキーを打つと通常の Alt キーとして動作
 ;
-; Author:     karakaram   http://www.karakaram.com/alt-ime-on-off
+; Author:              nekocodeX   https://github.com/nekocodeX/alt-ime-ahk-mod
+; Original author:     karakaram   http://www.karakaram.com/alt-ime-on-off
 
 #Include IME.ahk
 
@@ -107,22 +108,20 @@
 *~PgDn::
     Return
 
-; 上部メニューがアクティブになるのを抑制
-*~LAlt::Send {Blind}{vk07}
-*~RAlt::Send {Blind}{vk07}
+; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
+*~LAlt::Send {Blind}{vkFF}
+*~RAlt::Send {Blind}{vkFF}
 
 ; 左 Alt 空打ちで IME を OFF
 LAlt up::
-    if (A_PriorHotkey == "*~LAlt")
-    {
+    if (A_PriorHotkey == "*~LAlt") {
         IME_SET(0)
     }
     Return
 
 ; 右 Alt 空打ちで IME を ON
 RAlt up::
-    if (A_PriorHotkey == "*~RAlt")
-    {
+    if (A_PriorHotkey == "*~RAlt") {
         IME_SET(1)
     }
     Return
