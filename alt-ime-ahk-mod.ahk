@@ -12,6 +12,22 @@
 ; Razer Synapseなど、キーカスタマイズ系のツールを併用しているときのエラー対策
 #MaxHotkeysPerInterval 350
 
+; メニュー項目
+Menu, Tray, Add, Check for updates, CheckForUpdates
+Menu, Tray, Add, GitHub Repo / Readme, GitHubRepoReadme
+Menu, Tray, Add
+Menu, Tray, NoStandard
+Menu, Tray, Standard
+Return
+
+CheckForUpdates:
+    Run, https://github.com/nekocodeX/alt-ime-ahk-mod/releases/latest
+    Return
+
+GitHubRepoReadme:
+    Run, https://github.com/nekocodeX/alt-ime-ahk-mod
+    Return
+
 ; 主要なキーを HotKey に設定し、何もせずパススルーする
 *~a::
 *~b::
@@ -108,7 +124,7 @@
 *~PgDn::
     Return
 
-; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
+; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar 起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
 *~LAlt::Send {Blind}{vkFF}
 *~RAlt::Send {Blind}{vkFF}
 
@@ -124,4 +140,15 @@ RAlt up::
     if (A_PriorHotkey == "*~RAlt") {
         IME_SET(1)
     }
+    Return
+
+; CapsLock 0.75秒 長押しで ON
+CapsLock::
+    KeyWait, CapsLock, T0.75
+    If (ErrorLevel && !GetKeyState("CapsLock", "T")) {
+        SetCapsLockState, On
+    } else if (!ErrorLevel && GetKeyState("CapsLock", "T")) {
+        SetCapsLockState, Off   
+    }
+    KeyWait, CapsLock
     Return
