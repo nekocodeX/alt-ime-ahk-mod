@@ -12,6 +12,22 @@
 ; Razer Synapseなど、キーカスタマイズ系のツールを併用しているときのエラー対策
 #MaxHotkeysPerInterval 350
 
+; メニュー項目
+Menu, Tray, Add, Check for updates, CheckForUpdates
+Menu, Tray, Add, GitHub Repo / Readme, GitHubRepoReadme
+Menu, Tray, Add
+Menu, Tray, NoStandard
+Menu, Tray, Standard
+Return
+
+CheckForUpdates:
+    Run, https://github.com/nekocodeX/alt-ime-ahk-mod/releases/latest
+    Return
+
+GitHubRepoReadme:
+    Run, https://github.com/nekocodeX/alt-ime-ahk-mod
+    Return
+
 ; 主要なキーを HotKey に設定し、何もせずパススルーする
 *~a::
 *~b::
