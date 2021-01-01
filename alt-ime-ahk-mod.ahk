@@ -124,7 +124,7 @@ GitHubRepoReadme:
 *~PgDn::
     Return
 
-; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
+; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar 起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
 *~LAlt::Send {Blind}{vkFF}
 *~RAlt::Send {Blind}{vkFF}
 
@@ -140,4 +140,15 @@ RAlt up::
     if (A_PriorHotkey == "*~RAlt") {
         IME_SET(1)
     }
+    Return
+
+; CapsLock 0.75秒 長押しで ON
+CapsLock::
+    KeyWait, CapsLock, T0.75
+    If (ErrorLevel && !GetKeyState("CapsLock", "T")) {
+        SetCapsLockState, On
+    } else if (!ErrorLevel && GetKeyState("CapsLock", "T")) {
+        SetCapsLockState, Off   
+    }
+    KeyWait, CapsLock
     Return
