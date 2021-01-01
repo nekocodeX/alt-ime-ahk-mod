@@ -10,6 +10,11 @@
 
 -   Windows 10 v1909 以降 <kbd>Alt</kbd> キーを長押しすると、Xbox Game Bar が起動してしまう問題を修正  
     Xbox Game Bar 起動用仮想キーコードとのバッティングを回避 (`vk07` -> `vkFF`)
+-   メニュー項目を追加
+    -   [Check for updates](https://github.com/nekocodeX/alt-ime-ahk-mod/releases/latest)
+    -   [GitHub Repo / Readme](https://github.com/nekocodeX/alt-ime-ahk-mod)
+-   <kbd>CapsLock</kbd> `0.75秒` 長押しで ON  
+    (OFF は変更なし)
 
 ## ✅ 動作環境
 
