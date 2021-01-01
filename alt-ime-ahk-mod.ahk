@@ -12,13 +12,23 @@
 ; Razer Synapseなど、キーカスタマイズ系のツールを併用しているときのエラー対策
 #MaxHotkeysPerInterval 350
 
+; 既存のインスタンスが存在する場合、終了して新たにインスタンスを開始
+#SingleInstance Force
+
 ; メニュー項目
-Menu, Tray, Add, Check for updates, CheckForUpdates
+Menu, Tray, Add, %A_ScriptName%, AppName
+Menu, Tray, Disable, %A_ScriptName%
+Menu, Tray, Default, %A_ScriptName%
+Menu, Tray, Add
+Menu, Tray, Add, Check for Updates..., CheckForUpdates
 Menu, Tray, Add, GitHub Repo / Readme, GitHubRepoReadme
 Menu, Tray, Add
 Menu, Tray, NoStandard
 Menu, Tray, Standard
 Return
+
+AppName:
+    Return
 
 CheckForUpdates:
     Run, https://github.com/nekocodeX/alt-ime-ahk-mod/releases/latest
