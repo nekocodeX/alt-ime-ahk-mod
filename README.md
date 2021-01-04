@@ -1,6 +1,9 @@
 # alt-ime-ahk-mod
 
-左右 <kbd>Alt</kbd> キーの空打ちで IME を ON/OFF する AutoHotkey スクリプト
+forked from [karakaram/alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)  
+(意図的に Fork 元のリポジトリから切り離し、スタンドアロンリポジトリへ変換しています)
+
+左右 <kbd>Alt</kbd> キーの空打ちで IME を ON/OFF する AutoHotkey スクリプトのような何か
 
 -   左 <kbd>Alt</kbd> キーの空打ちで IME OFF
 -   右 <kbd>Alt</kbd> キーの空打ちで IME ON
@@ -53,8 +56,8 @@
 
     </div>
 
--   IntelliJ IDEA など JetBrains 製の IDE をお使いの方は `上部メニューバー` > `View` > `Tool Buttons` をオンにしてください  
-    オフのまま使うと、<kbd>Alt</kbd> キーを離した際に `alt-ime-ahk-mod.exe` がエラー終了します
+-   IntelliJ IDEA など JetBrains 製の IDE をお使いの方は `上部メニューバー` > `View` > `Tool Buttons` を ON にしてください  
+    OFF のまま使うと、<kbd>Alt</kbd> キーを離した際に `alt-ime-ahk-mod.exe` がエラー終了します
 
 ## 🙇‍♂️ 謝辞
 
