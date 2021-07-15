@@ -1,8 +1,9 @@
-; 左右 Alt キーの空打ちで IME の OFF/ON を切り替える
+; 左右 Alt キーの空打ちで IME を ON/OFF する AutoHotkey スクリプトのような何か
 ;
-; 左 Alt キーの空打ちで IME を「英数」に切り替え
-; 右 Alt キーの空打ちで IME を「かな」に切り替え
+; 左 Alt キーの空打ちで IME OFF
+; 右 Alt キーの空打ちで IME ON
 ; Alt キーを押している間に他のキーを打つと通常の Alt キーとして動作
+; CapsLock 0.75秒 長押しで ON (OFF は変更なし)
 ;
 ; Author:              nekocodeX   https://github.com/nekocodeX/alt-ime-ahk-mod
 ; Original author:     karakaram   http://www.karakaram.com/alt-ime-on-off
@@ -135,8 +136,10 @@ GitHubRepoReadme:
     Return
 
 ; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar 起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
-*~LAlt::Send {Blind}{vkFF}
-*~RAlt::Send {Blind}{vkFF}
+*~LAlt::
+    Send {Blind}{vkFF}
+*~RAlt::
+    Send {Blind}{vkFF}
 
 ; 左 Alt 空打ちで IME を OFF
 LAlt up::
@@ -152,13 +155,17 @@ RAlt up::
     }
     Return
 
-; CapsLock 0.75秒 長押しで ON
+; CapsLock 0.75秒 長押しで ON (OFF は変更なし)
 CapsLock::
     KeyWait, CapsLock, T0.75
     If (ErrorLevel && !GetKeyState("CapsLock", "T")) {
         SetCapsLockState, On
     } else if (!ErrorLevel && GetKeyState("CapsLock", "T")) {
-        SetCapsLockState, Off   
+        SetCapsLockState, Off
     }
     KeyWait, CapsLock
+    Return
+
+; Win + CapsLock を無視
+#CapsLock::
     Return
