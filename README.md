@@ -33,7 +33,7 @@ forked from [karakaram/alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)
 
 ### 終了
 
--   タスクトレイのアイコンを右クリック → `Exit` をクリック
+-   タスクトレイのアイコンを右クリック > `Exit` をクリック
 
 ### アンインストール
 
@@ -63,4 +63,4 @@ forked from [karakaram/alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)
 
 [alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk) の作者 [karakaram](https://github.com/karakaram)
 
-[Alt の空打ちで日本語入力(IME)を切り替えるツールを作った](http://www.karakaram.com/alt-ime-on-off/)
+[Alt の空打ちで日本語入力(IME)を切り替えるツールを作った](http://www.karakaram.com/alt-ime-on-off)

@@ -1,0 +1,54 @@
+name: Ahk2Exe and Release for alt-ime-ahk-mod
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  Ahk2Exe-and-Release:
+    name: Ahk2Exe and Release
+    runs-on: windows-latest
+    steps:
+      - name: Install Scoop
+        shell: powershell
+        run: |
+          iwr -useb get.scoop.sh | iex
+          scoop bucket add extras
+
+      - name: Add to environment variables
+        shell: powershell
+        run: Write-Output ('Path=' + $Env:SystemDrive + '\Windows\System32' + ';' + $Env:UserProfile + '\scoop\shims') >> $Env:GITHUB_ENV
+
+      - name: Install Git
+        shell: powershell
+        run: scoop install git
+
+      - name: Install AutoHotkey
+        shell: powershell
+        run: scoop install autohotkey
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Ahk2Exe
+        shell: powershell
+        run: ahk2exe /in alt-ime-ahk-mod.ahk /out alt-ime-ahk-mod.exe
+
+      - name: Collect tag information
+        id: tag-info
+        shell: powershell
+        run: Write-Output ('::set-output name=tag-name::' + ('${{github.ref}}' -replace 'refs/tags/', ''))
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{steps.tag-info.outputs.tag-name}}
+          name: Release ${{steps.tag-info.outputs.tag-name}}🎉
+          body: ---
+          files: alt-ime-ahk-mod.exe
+          draft: true
+          prerelease: false
+          fail_on_unmatched_files: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
