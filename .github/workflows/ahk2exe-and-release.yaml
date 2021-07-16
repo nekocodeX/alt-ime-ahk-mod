@@ -10,30 +10,13 @@ jobs:
     name: Ahk2Exe and Release
     runs-on: windows-latest
     steps:
-      - name: Install Scoop
-        shell: powershell
-        run: |
-          iwr -useb get.scoop.sh | iex
-          scoop bucket add extras
-
-      - name: Add to environment variables
-        shell: powershell
-        run: Write-Output ('Path=' + $Env:SystemDrive + '\Windows\System32' + ';' + $Env:UserProfile + '\scoop\shims') >> $Env:GITHUB_ENV
-
-      - name: Install Git
-        shell: powershell
-        run: scoop install git
-
-      - name: Install AutoHotkey
-        shell: powershell
-        run: scoop install autohotkey
-
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Ahk2Exe
-        shell: powershell
-        run: ahk2exe /in alt-ime-ahk-mod.ahk /out alt-ime-ahk-mod.exe
+        uses: nekocodeX/GitHub-Action-Ahk2Exe@v1.0.0
+        with:
+          in: alt-ime-ahk-mod.ahk
 
       - name: Collect tag information
         id: tag-info
