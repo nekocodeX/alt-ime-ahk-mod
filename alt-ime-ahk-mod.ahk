@@ -8,6 +8,12 @@
 ; Author:              nekocodeX   https://github.com/nekocodeX/alt-ime-ahk-mod
 ; Original author:     karakaram   http://www.karakaram.com/alt-ime-on-off
 
+; Ahk2Exe用設定
+;@Ahk2Exe-SetName alt-ime-ahk-mod
+;@Ahk2Exe-SetLanguage 0x0411
+;@Ahk2Exe-AddResource ./assets/icon.ico
+;@Ahk2Exe-AddResource ./assets/icon-capslock.ico
+
 #Include IME.ahk
 
 ; Razer Synapseなど、キーカスタマイズ系のツールを併用しているときのエラー対策
@@ -16,8 +22,28 @@
 ; 既存のインスタンスが存在する場合、終了して新たにインスタンスを開始
 #SingleInstance Force
 
+; タスクトレイアイコン設定
+if (A_IsCompiled) {
+    if (GetKeyState("CapsLock", "T")) {
+        Menu, Tray, Icon, icon-capslock.ico
+    } else {
+        Menu, Tray, Icon, icon.ico
+    }
+} else {
+    if (GetKeyState("CapsLock", "T")) {
+        Menu, Tray, Icon, ./assets/icon-capslock.ico
+    } else {
+        Menu, Tray, Icon, ./assets/icon.ico
+    }
+}
+
 ; メニュー項目
 Menu, Tray, Add, %A_ScriptName%, AppName
+if (A_IsCompiled) {
+    Menu, Tray, Icon, %A_ScriptName%, icon.ico
+} else {
+    Menu, Tray, Icon, %A_ScriptName%, ./assets/icon.ico
+}
 Menu, Tray, Disable, %A_ScriptName%
 Menu, Tray, Default, %A_ScriptName%
 Menu, Tray, Add
@@ -160,8 +186,18 @@ CapsLock::
     KeyWait, CapsLock, T0.75
     If (ErrorLevel && !GetKeyState("CapsLock", "T")) {
         SetCapsLockState, On
+        if (A_IsCompiled) {
+            Menu, Tray, Icon, icon-capslock.ico
+        } else {
+            Menu, Tray, Icon, ./assets/icon-capslock.ico
+        }
     } else if (!ErrorLevel && GetKeyState("CapsLock", "T")) {
         SetCapsLockState, Off
+        if (A_IsCompiled) {
+            Menu, Tray, Icon, icon.ico
+        } else {
+            Menu, Tray, Icon, ./assets/icon.ico
+        }
     }
     KeyWait, CapsLock
     Return

@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 950 950">
+  <defs>
+    <style>
+      .a {
+        fill: url(#a);
+      }
+
+      .b {
+        fill: url(#b);
+      }
+
+      .c {
+        fill: url(#c);
+      }
+
+      .d {
+        fill: url(#d);
+      }
+
+      .e {
+        fill: url(#e);
+      }
+
+      .f {
+        fill: url(#f);
+      }
+
+      .g {
+        fill: url(#g);
+      }
+
+      .h {
+        fill: url(#h);
+      }
+
+      .i {
+        fill: url(#i);
+      }
+
+      .j {
+        fill: url(#j);
+      }
+
+      .k {
+        fill: url(#k);
+      }
+
+      .l {
+        fill: url(#l);
+      }
+
+      .m {
+        fill: url(#m);
+      }
+
+      .n {
+        fill: url(#n);
+      }
+
+      .o {
+        fill: url(#o);
+      }
+
+      .p {
+        fill: url(#p);
+      }
+
+      .q {
+        fill: url(#q);
+      }
+
+      .r {
+        fill: url(#r);
+      }
+
+      .s {
+        fill: url(#s);
+      }
+
+      .t {
+        fill: url(#t);
+      }
+    </style>
+    <linearGradient id="a" x1="858.839" y1="91.161" x2="91.161" y2="858.839" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#484848"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="b" x1="146.339" y1="328.661" x2="53.661" y2="421.339" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#969696"/>
+    </linearGradient>
+    <linearGradient id="c" x1="296.339" y1="328.661" x2="203.661" y2="421.339" xlink:href="#b"/>
+    <linearGradient id="d" x1="446.339" y1="328.661" x2="353.661" y2="421.339" xlink:href="#b"/>
+    <linearGradient id="e" x1="596.339" y1="328.661" x2="503.661" y2="421.339" xlink:href="#b"/>
+    <linearGradient id="f" x1="746.339" y1="328.661" x2="653.661" y2="421.339" xlink:href="#b"/>
+    <linearGradient id="g" x1="896.339" y1="328.661" x2="803.661" y2="421.339" xlink:href="#b"/>
+    <linearGradient id="h" x1="521.339" y1="478.661" x2="428.661" y2="571.339" xlink:href="#b"/>
+    <linearGradient id="i" x1="671.339" y1="478.661" x2="578.661" y2="571.339" xlink:href="#b"/>
+    <linearGradient id="j" x1="877.151" y1="459.849" x2="746.849" y2="590.151" xlink:href="#b"/>
+    <linearGradient id="k" x1="371.339" y1="478.661" x2="278.661" y2="571.339" xlink:href="#b"/>
+    <linearGradient id="l" x1="203.151" y1="459.849" x2="72.849" y2="590.151" xlink:href="#b"/>
+    <linearGradient id="m" x1="596.339" y1="553.661" x2="353.661" y2="796.339" xlink:href="#b"/>
+    <linearGradient id="n" x1="-1200.485" y1="-107.476" x2="-1125.485" y2="-107.476" gradientTransform="translate(-423.352 1189.358) rotate(135)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1dff1d"/>
+      <stop offset="0.5" stop-color="#16e81b"/>
+      <stop offset="1" stop-color="#03a716"/>
+    </linearGradient>
+    <linearGradient id="o" x1="133.839" y1="216.161" x2="66.161" y2="283.839" xlink:href="#b"/>
+    <linearGradient id="p" x1="283.839" y1="216.161" x2="216.161" y2="283.839" xlink:href="#b"/>
+    <linearGradient id="q" x1="433.839" y1="216.161" x2="366.161" y2="283.839" xlink:href="#b"/>
+    <linearGradient id="r" x1="583.839" y1="216.161" x2="516.161" y2="283.839" xlink:href="#b"/>
+    <linearGradient id="s" x1="733.839" y1="216.161" x2="666.161" y2="283.839" xlink:href="#b"/>
+    <linearGradient id="t" x1="883.839" y1="216.161" x2="816.161" y2="283.839" xlink:href="#b"/>
+  </defs>
+  <g>
+    <rect class="a" y="175" width="950" height="600" rx="12.5"/>
+    <g>
+      <g>
+        <rect class="b" x="50" y="325" width="100" height="100" rx="12.5"/>
+        <rect class="c" x="200" y="325" width="100" height="100" rx="12.5"/>
+        <rect class="d" x="350" y="325" width="100" height="100" rx="12.5"/>
+        <rect class="e" x="500" y="325" width="100" height="100" rx="12.5"/>
+        <rect class="f" x="650" y="325" width="100" height="100" rx="12.5"/>
+        <rect class="g" x="800" y="325" width="100" height="100" rx="12.5"/>
+      </g>
+      <g>
+        <rect class="h" x="425" y="475" width="100" height="100" rx="12.5"/>
+        <rect class="i" x="575" y="475" width="100" height="100" rx="12.5"/>
+        <rect class="j" x="724.375" y="475" width="175.25" height="100" rx="12.5"/>
+        <rect class="k" x="275" y="475" width="100" height="100" rx="12.5"/>
+        <rect class="l" x="50.375" y="475" width="175.25" height="100" rx="12.5"/>
+      </g>
+      <rect class="m" x="275" y="625" width="400" height="100" rx="12.5"/>
+      <circle class="n" cx="475" cy="443" r="37.5"/>
+      <g>
+        <rect class="o" x="50" y="225" width="100" height="50" rx="12.5"/>
+        <rect class="p" x="200" y="225" width="100" height="50" rx="12.5"/>
+        <rect class="q" x="350" y="225" width="100" height="50" rx="12.5"/>
+        <rect class="r" x="500" y="225" width="100" height="50" rx="12.5"/>
+        <rect class="s" x="650" y="225" width="100" height="50" rx="12.5"/>
+        <rect class="t" x="800" y="225" width="100" height="50" rx="12.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
