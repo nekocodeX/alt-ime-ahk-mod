@@ -17,6 +17,7 @@ jobs:
         uses: nekocodeX/GitHub-Action-Ahk2Exe@v1.0.1
         with:
           in: alt-ime-ahk-mod.ahk
+          icon: ./assets/icon.ico
 
       - name: Collect tag information
         id: tag-info
